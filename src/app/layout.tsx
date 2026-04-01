@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Orbitron } from "next/font/google";
+import localFont from "next/font/local";
+
 import "./globals.css";
+import Nav from "@/shared/Nav";
+import Footer from "@/shared/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +14,17 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"],
+});
+
+const paladinsstraight = localFont({
+  src: "../../public/fonts/paladinsstraight.ttf",
+  display: "swap",
+  variable: "--font-paladin",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +40,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${paladinsstraight.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
