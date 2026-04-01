@@ -38,7 +38,7 @@ const Banner = () => {
       >
         {images?.map((item, idx) => (
           <SwiperSlide>
-            <img className="w-full h-screen" src={item} />
+            <img className="w-full h-auto lg:h-screen" src={item} />
           </SwiperSlide>
         ))}
       </Swiper>

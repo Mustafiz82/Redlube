@@ -9,15 +9,15 @@ const WhyRedLube = () => {
           aria-hidden="true"
         /> */}
 
-        <div className="max-w-7xl relative py-36 mt-28 mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
+        <div className="max-w-7xl relative py-20 lg:py-36 mt-28 mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
           {/* LEFT SIDE */}
-          <div className=" pl-20 space-y-6 items-start ">
+          <div className="lg:pl-20 space-y-6 items-start ">
             {/* Vertical Line */}
             <div className="flex gap-5">
-              <div className="w-[5px] h-[40px] bg-primary mt-2"></div>
+              <div className="w-[5px] h-[30px] lg:h-[40px] bg-primary mt-2"></div>
 
               {/* Heading */}
-              <h2 className="font-paladin text-white font-extralight text-[40px]  text-primary leading-tight">
+              <h2 className="font-paladin text-white font-extralight text-3xl lg:text-[40px]  text-primary leading-tight">
                 Why RedLube
               </h2>
             </div>
@@ -44,7 +44,7 @@ const WhyRedLube = () => {
               <img
                 src="/REDLUBE_PREMIUM_HD_20W-50-removebg-preview.png" // put your image in public folder
                 alt="pattern"
-                className="object-contain mr-20"
+                className="object-contain mr-10 lg:mr-20"
               />
             </div>
           </div>
