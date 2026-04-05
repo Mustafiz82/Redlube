@@ -9,10 +9,10 @@ export default function ProductCard() {
         <div className="flex justify-center my-6">
           <div className="w-40 h-40 bg-gray-100 rounded-full relative ">
             <Image
-              src="/REDLUBE_PREMIUM_HD_20W-50-removebg-preview.png"
+              src="/product-image.png"
               alt="Redlube Octane Booster"
               fill
-              className="object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 drop-shadow-lg"
+              className="object-contain  transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 drop-shadow-lg"
             />
           </div>
         </div>

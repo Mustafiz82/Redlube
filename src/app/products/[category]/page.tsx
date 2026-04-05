@@ -48,16 +48,12 @@ const Page = () => {
         </p>
       </div>
 
-      {/* 
-        Wrap Categories and Products in a single div with the sectionRef attached.
-        This allows us to measure if they overflow the viewport.
-      */}
       <div ref={sectionRef} className="relative">
         
         {/* CATEGORIES WRAPPER */}
         <div
-          className={`flex bg-white w-full overflow-x-scroll flex-wrap justify-center gap-4 lg:gap-6 items-center px-4 mb-20 max-w-7xl mx-auto transition-all duration-300 ${
-            isSticky ? "sticky top-0 z-[999] py-4  rounded-b-xl" : ""
+          className={`flex bg-white w-full overflow-x-auto flex-wrap justify-center gap-4 lg:gap-6 items-center px-4 mb-20 max-w-7xl mx-auto transition-all duration-300 ${
+            isSticky ? "sticky top-0 z-999 py-4  rounded-b-xl" : ""
           }`}
         >
           {categories?.map((cat) => {
@@ -114,7 +110,7 @@ const Page = () => {
           <ProductCard />
           <ProductCard />
          
-          {/* Add more ProductCards here, as it expands, the categories will automatically become sticky */}
+        
         </div>
 
       </div>
