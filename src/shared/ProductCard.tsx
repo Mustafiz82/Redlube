@@ -1,15 +1,32 @@
+"use client"
+import { Product } from "@/Data/product";
 import Image from "next/image";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 
-export default function ProductCard() {
+interface ProductCardProps {
+  item: Product;
+}
+
+export default function ProductCard({ item }: ProductCardProps) {
+
+
+ 
+
+
+
+  
+
+
   return (
-    <div className="flex items-center justify-center ">
+    <Link href={`/products/${item.category}/${item?.slug}`} className="flex items-center justify-center ">
       {/* Added 'group' class to trigger child animations and transition effects */}
       <div className="group w-[320px] rounded-2xl bg-white shadow-xl p-6 text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
         {/* Product Image Container */}
         <div className="flex justify-center my-6">
           <div className="w-40 h-40 bg-gray-100 rounded-full relative ">
             <Image
-              src="/product-image.png"
+              src={("/products/" + item?.slug+".png")}
               alt="Redlube Octane Booster"
               fill
               className="object-contain  transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 drop-shadow-lg"
@@ -19,7 +36,7 @@ export default function ProductCard() {
 
         {/* Title - Added transition and group-hover color change */}
         <h2 className="text-xl font-orbitron font-bold text-gray-900 leading-tight transition-colors duration-300 group-hover:text-primary">
-          Redlube Octane Booster
+        {item.productName.split("(")[0]}
         </h2>
 
         {/* Button - Added scale and shadow glow on hover */}
@@ -27,6 +44,6 @@ export default function ProductCard() {
           LEARN MORE
         </button>
       </div>
-    </div>
+    </Link>
   );
 }

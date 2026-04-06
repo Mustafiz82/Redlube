@@ -12,10 +12,12 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 
 const Banner = () => {
   const images = [
-    "/banner/All-prodcuts-16x9.jpg",
-    "/banner/car-fb-cover-16x9.jpg",
-    "/banner/Cng-fb-cover-16x9.jpg",
-    "/banner/Diesel-FB-cover-16x9.jpg",
+    "/banner/banner-image-1.jpeg",
+    "/banner/banner-image-2.jpeg",
+    "/banner/banner-image-3.jpeg",
+    // "/banner/car-fb-cover-16x9.jpg",
+    // "/banner/Cng-fb-cover-16x9.jpg",
+    // "/banner/Diesel-FB-cover-16x9.jpg",
   ];
 
   return (
@@ -38,7 +40,7 @@ const Banner = () => {
       >
         {images?.map((item, idx) => (
           <SwiperSlide>
-            <img className="w-full h-auto lg:h-screen" src={item} />
+            <img className="w-full h-auto " src={item} />
           </SwiperSlide>
         ))}
       </Swiper>

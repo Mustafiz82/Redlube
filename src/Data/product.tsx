@@ -1,8 +1,9 @@
-const redLubeCompleteCatalog = [
+export const productData:Product[] = [
   {
     productName: "RED LUBE CARGO SPECIAL 15W-40 (API CH-4)",
     slug: "red-lube-cargo-special-15w-40-api-ch-4",
-    header: "DIESEL ENGINE OIL (DEO)",
+    category: "AUTOMOTIVE",
+    subCategory : "DIESEL" ,
     tagline: "Premium Heavy-Duty Diesel Engine Oil for Commercial Fleets",
     productDescription: "RED LUBE CARGO SPECIAL 15W-40 is a high-performance, heavy-duty engine oil meticulously engineered for commercial and cargo vehicles. Formulated to meet the stringent API CH-4 standards, this premium multigrade engine oil provides exceptional defense against engine wear, soot-induced viscosity increase, and high-temperature oxidation. Whether navigating long highway hauls or demanding stop-and-go delivery routes, RED LUBE CARGO SPECIAL ensures your engine operates at peak efficiency, minimizing downtime and maximizing the lifespan of your commercial fleet.",
     application: [
@@ -49,6 +50,8 @@ const redLubeCompleteCatalog = [
   {
     productName: "RED LUBE CARGO SPECIAL 20W-50 (API CH-4)",
     slug: "red-lube-cargo-special-20w-50-api-ch-4",
+    category:"AUTOMOTIVE",
+    subCategory : "DIESEL",
     tagline: "Heavy-Duty Diesel Engine Oil for High-Mileage and High-Load Commercial Vehicles",
     productDescription: "RED LUBE CARGO SPECIAL 20W-50 is a robust, heavy-duty engine oil specifically formulated for commercial and cargo vehicles operating under severe conditions. Engineered to meet API CH-4 standards, this thicker multigrade oil provides an ultra-durable lubricating film that is ideal for older, high-mileage engines and fleets operating in warmer climates or carrying extreme loads. RED LUBE CARGO SPECIAL delivers exceptional defense against engine wear, soot accumulation, and high-temperature degradation, ensuring your commercial vehicles stay on the road longer and operate efficiently.",
     application: [
@@ -95,6 +98,8 @@ const redLubeCompleteCatalog = [
   {
     productName: "RED LUBE CNG SPECIAL 20W-50 (API SL/CF)",
     slug: "red-lube-cng-special-20w-50-api-sl-cf",
+    category:"AUTOMOTIVE",
+    subCategory : "CNG",
     tagline: "Dedicated High-Performance Engine Oil for CNG, LPG & Bi-Fuel Three-Wheelers",
     productDescription: "RED LUBE CNG SPECIAL 20W-50 is a premium multigrade engine oil specifically formulated to meet the unique demands of vehicles operating on Compressed Natural Gas (CNG), Liquefied Petroleum Gas (LPG), and bi-fuel systems. Gas-fueled engines typically run at significantly higher operating temperatures than standard gasoline engines, leading to accelerated oil degradation and valve wear. Engineered to API SL/CF standards, this specialized formulation combats high-temperature nitration and oxidation, ensuring \"Longer Engine Life\" (as proudly stated on the pack). It provides robust protection for three-wheelers and small commercial vehicles enduring the rigorous demands of daily stop-and-go city traffic.",
     application: [
@@ -141,7 +146,8 @@ const redLubeCompleteCatalog = [
   {
     productName: "RED LUBE PREMIUM PLUS 20W-50 (API SN)",
     slug: "red-lube-premium-plus-20w-50-api-sn",
-    header: "CAR ITEM (PCMO)",
+    category:"AUTOMOTIVE",
+    subCategory : "CAR",
     tagline: "Advanced High-Performance Engine Oil for Passenger Cars",
     productDescription: "RED LUBE PREMIUM PLUS 20W-50 is a premium-grade engine oil formulated to deliver outstanding protection and performance for modern gasoline-powered passenger cars. Engineered to meet the advanced API SN specification, this high-quality multigrade oil provides superior defense against high-temperature deposits, engine sludge, and wear. The robust 20W-50 viscosity profile creates a resilient lubricating film, making it an excellent choice for vehicles operating in warmer climates, high-mileage engines, or cars frequently subjected to heavy city traffic. Packaged in a convenient 4-liter bottle, it provides the perfect volume for standard passenger vehicle oil changes.",
     application: [
@@ -188,6 +194,8 @@ const redLubeCompleteCatalog = [
   {
     productName: "RED LUBE RACETRACK 5W-30 (API SN)",
     slug: "red-lube-racetrack-5w-30-api-sn",
+    category:"AUTOMOTIVE",
+    subCategory : "CAR",
     tagline: "High-Performance Engine Oil for Modern Passenger Cars",
     productDescription: "RED LUBE RACETRACK 5W-30 is an advanced, high-performance engine oil designed to deliver race-ready protection and exceptional efficiency for modern gasoline-powered vehicles. Engineered to meet the rigorous API SN standards, this premium multigrade oil provides outstanding defense against high-temperature deposit buildup, engine sludge, and everyday wear and tear. The optimized 5W-30 viscosity ensures rapid oil circulation during cold starts while maintaining a resilient lubricating film under high-speed and high-temperature operating conditions. Packaged in a 4-liter container, it is the ideal volume for passenger cars demanding peak performance and superior fuel economy.",
     application: [
@@ -234,7 +242,8 @@ const redLubeCompleteCatalog = [
   {
     productName: "RED LUBE POWER 4T 10W-40 (API SN, JASO MA2)",
     slug: "red-lube-power-4t-10w-40-api-sn-jaso-ma2",
-    header: "BIKE ITEM",
+    category:"AUTOMOTIVE",
+    subCategory : "BIKE",
     tagline: "Premium High-Performance 4-Stroke Motorcycle Engine Oil with EST",
     productDescription: "RED LUBE POWER 4T 10W-40 is a premium, high-performance engine oil specifically engineered to maximize the power and longevity of modern four-stroke motorcycles. Formulated to meet the stringent API SN and JASO MA2 standards, this advanced lubricant provides uncompromising protection for your engine, gearbox, and wet clutch system. What sets this oil apart is the proprietary EST (Easy Spread Technology). This innovative feature ensures rapid and uniform oil distribution from the exact moment of ignition, coating critical engine components instantly to prevent cold-start wear. Packaged in a premium 1-liter metal can, it is the ultimate choice for riders who demand aggressive power delivery, crisp gear shifts, and peak thermal stability.",
     application: [
@@ -282,6 +291,8 @@ const redLubeCompleteCatalog = [
   {
     productName: "RED LUBE PREMIUM 4T 20W-40 (API SN, JASO MA2)",
     slug: "red-lube-premium-4t-20w-40-api-sn-jaso-ma2",
+    category:"AUTOMOTIVE",
+    subCategory : "BIKE",
     tagline: "Premium High-Performance 4-Stroke Motorcycle Engine Oil with EST",
     productDescription: "RED LUBE PREMIUM 4T 20W-40 is a highly durable, premium-grade engine oil specifically engineered for four-stroke motorcycles operating in demanding conditions. Formulated to meet the highest API SN and JASO MA2 standards, this robust 20W-40 multigrade oil provides exceptional film strength and wear protection, making it ideal for warmer climates, heavy stop-and-go traffic, and sustained highway cruising. Enhanced with proprietary EST (Easy Spread Technology), this oil ensures rapid and uniform lubrication from the moment you turn the key, minimizing friction during engine start-up. Packaged in a high-quality 1-liter metal can, RED LUBE PREMIUM 4T delivers outstanding thermal stability, precise gear shifts, and long-lasting protection for your engine, gearbox, and wet clutch.",
     application: [
@@ -329,6 +340,8 @@ const redLubeCompleteCatalog = [
   {
     productName: "RED LUBE PREMIUM 4T 20W-50 (API SN, JASO MA2)",
     slug: "red-lube-premium-4t-20w-50-api-sn-jaso-ma2",
+    category:"AUTOMOTIVE",
+    subCategory : "BIKE",
     tagline: "Heavy-Duty High-Performance 4-Stroke Motorcycle Engine Oil with EST",
     productDescription: "RED LUBE PREMIUM 4T 20W-50 is an ultra-durable, premium-grade engine oil expertly engineered for four-stroke motorcycles operating under extreme temperatures and heavy engine loads. Formulated to exceed the stringent API SN and JASO MA2 standards, this robust 20W-50 multigrade oil provides unparalleled film strength, making it the ultimate choice for large displacement engines, classic motorcycles, and air-cooled V-twins that run hot. Powered by our proprietary EST (Easy Spread Technology), this advanced formulation ensures rapid, uniform oil distribution from the exact moment of ignition, minimizing cold-start wear despite its thicker viscosity. Packaged in a premium 1-liter metal can, RED LUBE PREMIUM 4T guarantees maximum thermal stability, precise gear shifts, and long-lasting protection for your engine, gearbox, and wet clutch system.",
     application: [
@@ -374,3 +387,39 @@ const redLubeCompleteCatalog = [
     }
   }
 ];
+
+
+
+export interface ProductAdvantage {
+  title: string;
+  description: string;
+}
+
+export interface ProductSpecification {
+  saeViscosityGrade: string;
+  performanceStandard: string;
+  productType: string;
+  availableVolume: string;
+  specialTechnology? : string
+}
+
+export interface StorageAndHandling {
+  environment: string;
+  temperature: string;
+  sealing: string;
+  safety: string;
+}
+
+export interface Product {
+  productName: string;
+  category : string;
+  subCategory : string;
+  slug: string;
+  
+  tagline: string;
+  productDescription: string;
+  application: string[];
+  specification: ProductSpecification;
+  advantages: ProductAdvantage[];
+  storageAndHandling: StorageAndHandling;
+}

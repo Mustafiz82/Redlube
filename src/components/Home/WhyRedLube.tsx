@@ -4,10 +4,7 @@ const WhyRedLube = () => {
   return (
     <div>
       <section className="bg-[url('/shapes/2208_w018_n002_1259b_p15_1259.jpg')] bg-cover bg-fixed bg-black/50 bg-blend-color-burn  px-6 md:px-16 lg:px-24">
-        {/* <div
-          className="absolute inset-0 bg-[url('/shapes/why_us_bg_image.jpg')] bg-cover bg-center"
-          aria-hidden="true"
-        /> */}
+  
 
         <div className="max-w-7xl relative py-20 lg:py-36 mt-28 mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
           {/* LEFT SIDE */}
@@ -42,7 +39,7 @@ const WhyRedLube = () => {
              
 
               <img
-                src="/REDLUBE_PREMIUM_HD_20W-50-removebg-preview.png" // put your image in public folder
+                src="/products/red-lube-cargo-special-20w-50-api-ch-4.png" // put your image in public folder
                 alt="pattern"
                 className="object-contain mr-10 lg:mr-20"
               />

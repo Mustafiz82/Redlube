@@ -56,7 +56,6 @@ export default function AboutSection() {
       </div>
 
 
-      {/* <img  className="opacity-5 absolute h-[600px] -left-40 -bottom-0 -rotate-45" src="/shapes/1286-removebg-preview.png" alt="" /> */}
     </section>
   );
 }

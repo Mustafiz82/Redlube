@@ -1,37 +1,46 @@
 "use client";
 import { categories } from "@/Data/category";
+import { productData } from "@/Data/product";
 import ProductCard from "@/shared/ProductCard";
 import React, { useState, useEffect, useRef } from "react";
 
 const Page = () => {
-  const [selectedCat, setSelectedCat] = useState("all");
-  const[isSticky, setIsSticky] = useState(false);
+  const [selectedCat, setSelectedCat] = useState("ALL");
+  const [products , setProducts] = useState(productData || [])
+  const [isSticky, setIsSticky] = useState(false);
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    // Ensure we are in the browser environment
-    if (typeof window === "undefined" || !sectionRef.current) return;
+  // useEffect(() => {
+  //   if (typeof window === "undefined" || !sectionRef.current) return;
+  //   const observer = new ResizeObserver(([entry]) => {
+  //     if (entry.contentRect.height > window.innerHeight) {
+  //       setIsSticky(true);
+  //     } else {
+  //       setIsSticky(false);
+  //     }
+  //   });
 
-    // Use ResizeObserver to monitor the height of the category + products wrapper
-    const observer = new ResizeObserver(([entry]) => {
-      // If the height of the products + categories is greater than the viewport height, make it sticky
-      if (entry.contentRect.height > window.innerHeight) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    });
+  //   observer.observe(sectionRef.current);
 
-    observer.observe(sectionRef.current);
+  //   return () => observer.disconnect();
+  // }, []);
 
-    return () => observer.disconnect();
-  },[]); // Empty dependency array ensures it runs on mount
+
+  useEffect(() =>{
+
+    if(selectedCat === "ALL"){
+      return setProducts(productData)
+    }
+    const filteredProducts = productData.filter(item => item.subCategory === selectedCat )
+    setProducts(filteredProducts)
+
+  } ,[selectedCat])
 
   return (
     <div>
       <img
-        className="h-[500px] w-screen object-cover object-center"
-        src="/banner/All-prodcuts-16x9.jpg"
+        className=" w-screen object-cover object-center"
+        src="/banner/automative-banner-21-9.jpg"
         alt="Banner"
       />
 
@@ -49,7 +58,6 @@ const Page = () => {
       </div>
 
       <div ref={sectionRef} className="relative">
-        
         {/* CATEGORIES WRAPPER */}
         <div
           className={`flex bg-white w-full overflow-x-auto flex-wrap justify-center gap-4 lg:gap-6 items-center px-4 mb-20 max-w-7xl mx-auto transition-all duration-300 ${
@@ -65,7 +73,7 @@ const Page = () => {
                 onClick={() => setSelectedCat(cat?.id)}
                 className={`cursor-pointer ${
                   isActive ? "bg-primary" : "bg-white"
-                } transition-colors duration-300 w-28 h-32 sm:w-44 sm:h-44 p-4 flex flex-col justify-center items-center rounded-xl shadow-md hover:shadow-lg`}
+                } transition-colors duration-300 w-28 h-32 sm:w-46 sm:h-44 p-4 flex flex-col justify-center items-center rounded-xl shadow-md hover:shadow-lg`}
               >
                 <div className="relative h-12 lg:h-16 w-full flex items-center justify-center mb-4">
                   {/* Default Image: Fades OUT when active */}
@@ -92,7 +100,7 @@ const Page = () => {
                 </div>
 
                 <span
-                  className={`text-xs transition-colors duration-300 mt-2 sm:text-sm font-bold text-center leading-tight tracking-wider uppercase ${
+                  className={`text-xs transition-colors duration-300 mt-2  sm:text-sm font-bold text-center leading-tight tracking-wider uppercase ${
                     isActive ? "text-white" : "text-black"
                   }`}
                 >
@@ -105,14 +113,11 @@ const Page = () => {
 
         {/* PRODUCTS WRAPPER */}
         <div className="grid max-w-7xl mb-20 mx-auto gap-5 grid-cols-1 lg:grid-cols-4 px-4">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-         
-        
+          {
+          products.map((item, index) => (
+            <ProductCard item={item} />
+          ))}
         </div>
-
       </div>
     </div>
   );

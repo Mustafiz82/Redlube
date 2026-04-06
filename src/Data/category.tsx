@@ -1,4 +1,4 @@
-type CategoryId = 'all' | 'bike' | 'car' | 'truck' | 'gear' | 'specialized' | 'industrial';
+type CategoryId = 'ALL' | 'BIKE' | 'CAR' | 'CNG' | 'DIESEL' | 'specialized' | 'industrial';
 
 interface Category {
   id: CategoryId;
@@ -11,46 +11,46 @@ interface Category {
 
 export const categories: Category[] =[
   {
-    id: 'all',
+    id: 'ALL',
     label: 'ALL',
-    icon: "/category/all-removebg-preview.png",
-    iconActive : "/category/all-red-removebg-preview.png",
+    icon: "/category/all-red.png",
+    iconActive : "/category/all-white.png",
 
     width: "w-10 lg:w-14",
   },
   {
-    id: 'bike',
-    label: 'BIKE',
-    icon: "/category/bike-removebg-preview.png",
-    iconActive : "/category/all-bike-removebg-preview.png",
+    id: 'BIKE',
+    label: 'BIKE ENGINE OIL',
+    icon: "/category/bike-red.png",
+    iconActive : "/category/bike-white.png",
     width: "w-16 lg:w-24" // Changed from w-25 to w-24
   },
   {
-    id: 'car',
-    label: 'CAR',
-    icon: "/category/car-removebg-preview.png",
-    iconActive : "/category/car-red-removebg-preview.png",
+    id: 'CAR',
+    label: 'CAR ENGINE OIL',
+    icon: "/category/car-red.png",
+    iconActive : "/category/car-white.png",
     width: "w-16 lg:w-24" // Changed from w-25 to w-24
   },
   {
-    id: 'truck',
-    label: 'TRUCK & TRACTOR',
-    icon: "/category/truck-removebg-preview.png",
-    iconActive : "/category/truck-red-removebg-preview.png",
+    id: 'CNG',
+    label: 'CNG ENGINE OIL',
+    icon: "/category/cng-red.png",
+    iconActive : "/category/cng-white.png",
     width: "w-16 lg:w-28" // Made slightly wider for the truck
   },
   {
-    id: 'gear',
-    label: 'GEAR & TRANSMISSION',
-    icon: "/category/gear-removebg-preview.png",
-    iconActive : "/category/gear-red-removebg-preview.png",
+    id: 'DIESEL',
+    label: 'DIESEL ENGINE OIL',
+    icon: "/category/diesel-red.png",
+    iconActive : "/category/diesel-white.png",
     width: "w-12 lg:w-20"
   },
-  {
-    id: 'specialized',
-    label: 'SPECIALIZED PRODUCTS',
-    icon: "/category/special-removebg-preview.png",
-    iconActive : "/category/special-red-removebg-preview.png",
-    width: "w-10 lg:w-16"
-  },
+  // {
+  //   id: 'specialized',
+  //   label: 'SPECIALIZED PRODUCTS',
+  //   icon: "/category/special-removebg-preview.png",
+  //   iconActive : "/category/special-red-removebg-preview.png",
+  //   width: "w-10 lg:w-16"
+  // },
 ];
