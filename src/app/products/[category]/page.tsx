@@ -1,7 +1,7 @@
 "use client";
 import { categories } from "@/Data/category";
 import { productData } from "@/Data/product";
-import ProductCard from "@/shared/ProductCard";
+import ProductCard from "@/components/Product/ProductCard";
 import React, { useState, useEffect, useRef } from "react";
 
 const Page = () => {
@@ -60,7 +60,7 @@ const Page = () => {
       <div ref={sectionRef} className="relative">
         {/* CATEGORIES WRAPPER */}
         <div
-          className={`flex bg-white w-full overflow-x-auto flex-wrap justify-center gap-4 lg:gap-6 items-center px-4 mb-20 max-w-7xl mx-auto transition-all duration-300 ${
+          className={`flex bg-white w-full overflow-x-auto flex-wrap md:w-[80%] lg:w-full justify-center gap-4 lg:gap-6 items-center px-4 mb-20 max-w-7xl mx-auto transition-all duration-300 ${
             isSticky ? "sticky top-0 z-999 py-4  rounded-b-xl" : ""
           }`}
         >
@@ -112,7 +112,7 @@ const Page = () => {
         </div>
 
         {/* PRODUCTS WRAPPER */}
-        <div className="grid max-w-7xl mb-20 mx-auto gap-5 grid-cols-1 lg:grid-cols-4 px-4">
+        <div className="grid lg:max-w-7xl md:max-w-2xl  mb-20 mx-auto items-center gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4">
           {
           products.map((item, index) => (
             <ProductCard item={item} />

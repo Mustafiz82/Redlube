@@ -21,7 +21,7 @@ export default function ProductCard({ item }: ProductCardProps) {
   return (
     <Link href={`/products/${item.category}/${item?.slug}`} className="flex items-center justify-center ">
       {/* Added 'group' class to trigger child animations and transition effects */}
-      <div className="group w-[320px] rounded-2xl bg-white shadow-xl p-6 text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
+      <div className="group w-[320px]  rounded-2xl bg-white shadow-xl p-6 text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
         {/* Product Image Container */}
         <div className="flex justify-center my-6">
           <div className="w-40 h-40 bg-gray-100 rounded-full relative ">

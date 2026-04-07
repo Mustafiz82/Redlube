@@ -44,7 +44,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Nav />
-        {children}
+        <div className="mt-18">{children}</div>
         <Footer />
       </body>
     </html>

@@ -1,5 +1,5 @@
 import { productData } from "@/Data/product";
-import ProductCard from "@/shared/ProductCard";
+import ProductCard from "@/components/Product/ProductCard";
 import React from "react";
 
 const Product = () => {
