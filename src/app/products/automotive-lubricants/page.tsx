@@ -2,6 +2,7 @@
 import { categories } from "@/Data/category";
 import { productData } from "@/Data/product";
 import ProductCard from "@/components/Product/ProductCard";
+import { useParams } from "next/navigation";
 import React, { useState, useEffect, useRef } from "react";
 
 const Page = () => {
@@ -10,20 +11,7 @@ const Page = () => {
   const [isSticky, setIsSticky] = useState(false);
   const sectionRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (typeof window === "undefined" || !sectionRef.current) return;
-  //   const observer = new ResizeObserver(([entry]) => {
-  //     if (entry.contentRect.height > window.innerHeight) {
-  //       setIsSticky(true);
-  //     } else {
-  //       setIsSticky(false);
-  //     }
-  //   });
 
-  //   observer.observe(sectionRef.current);
-
-  //   return () => observer.disconnect();
-  // }, []);
 
 
   useEffect(() =>{

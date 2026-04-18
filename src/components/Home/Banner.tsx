@@ -12,15 +12,20 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 
 const Banner = () => {
   const images = [
-    "/banner/banner-image-1.jpeg",
-    "/banner/banner-image-2.jpeg",
-    "/banner/banner-image-3.jpeg",
+    "/banner/banner-image-1.png",
+    "/banner/banner-image-2.png",
+    "/banner/banner-image-3.png",
+    "/banner/banner-image-4.png",
+    "/banner/banner-image-5.jpeg",
     // "/banner/car-fb-cover-16x9.jpg",
     // "/banner/Cng-fb-cover-16x9.jpg",
     // "/banner/Diesel-FB-cover-16x9.jpg",
   ];
 
-  return (
+  // #4F070A -black-red
+  // #r -black
+
+  return (  
     <div>
       <Swiper
         spaceBetween={30}

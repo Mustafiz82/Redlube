@@ -46,7 +46,7 @@ const Nav: React.FC = () => {
     },
     { label: "CONTACT US", link: "/contact" },
   ];
-
+   
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-[999] flex justify-between items-center bg-white shadow-sm transition-all duration-300 ease-in-out px-5 
@@ -71,7 +71,7 @@ const Nav: React.FC = () => {
             <input onChange={() => setIsOpen(!open)} checked={open} type="checkbox" id="burger" />
             <span></span>
             <span></span>
-            <span></span>
+            <span></span> 
           </label>
         </div>
       </div>
@@ -81,7 +81,7 @@ const Nav: React.FC = () => {
         {menu.map((item, idx) => (
           <li key={idx} className="relative group">
             <Link
-              href={item.link || "#"}
+              href={item.link || "#"} 
               className={`px-4 flex text-nowrap items-center cursor-pointer font-black text-primary font-orbitron hover:text-white hover:bg-primary transition-all duration-300 
                 ${isScrolled ? "py-2" : "py-4"}`}
             >
