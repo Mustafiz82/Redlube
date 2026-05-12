@@ -12,8 +12,6 @@ const Page = () => {
   const sectionRef = useRef(null);
 
 
-
-
   useEffect(() =>{
 
     if(selectedCat === "ALL"){
@@ -25,18 +23,19 @@ const Page = () => {
   } ,[selectedCat])
 
   return (
-    <div>
+    <div className="bg-black  text-white">
       <img
         className=" w-screen object-cover object-center"
-        src="/banner/automative-banner-21-9.jpg"
+        src="/banner/banner-image-1.webp"
         alt="Banner"
       />
 
-      <div className="py-20">
+  <div className="bg-linear-to-br from-primary via-black to-black">
+        <div className="py-20 ">
         <h2 className="text-3xl lg:text-4xl uppercase font-orbitron font-black text-center">
           AUTOMOTIVE Lubricants
         </h2>
-        <p className="max-w-6xl my-4 mx-auto text-center px-4">
+        <p className="max-w-6xl text-white/70 my-4 mx-auto text-center px-4">
           A complete range of high performance automotive lubricants engineered
           to deliver smooth rides, lasting engine protection, and superior fuel
           efficiency. Powered by advanced formulations like Ester Fluid
@@ -45,10 +44,9 @@ const Page = () => {
         </p>
       </div>
 
-      <div ref={sectionRef} className="relative">
         {/* CATEGORIES WRAPPER */}
         <div
-          className={`flex bg-white w-full overflow-x-auto flex-wrap md:w-[80%] lg:w-full justify-center gap-4 lg:gap-6 items-center px-4 mb-20 max-w-7xl mx-auto transition-all duration-300 ${
+          className={`flex  w-full overflow-x-auto flex-wrap md:w-[80%] lg:w-full justify-center gap-4 lg:gap-6 items-center px-4 mb-20 max-w-7xl mx-auto transition-all duration-300 ${
             isSticky ? "sticky top-0 z-999 py-4  rounded-b-xl" : ""
           }`}
         >
@@ -98,9 +96,11 @@ const Page = () => {
             );
           })}
         </div>
+  </div>
+      <div ref={sectionRef} className="relative bg-linear-to-t from-primary/70 via-black to-black">
 
         {/* PRODUCTS WRAPPER */}
-        <div className="grid lg:max-w-7xl md:max-w-2xl  mb-20 mx-auto items-center gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4">
+        <div className="grid lg:max-w-7xl md:max-w-2xl  pb-20 mx-auto items-center gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4">
           {
           products.map((item, index) => (
             <ProductCard item={item} />

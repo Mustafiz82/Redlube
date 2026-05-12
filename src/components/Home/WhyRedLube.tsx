@@ -3,10 +3,10 @@ import React from "react";
 const WhyRedLube = () => {
   return (
     <div>
-      <section className="bg-[url('/shapes/2208_w018_n002_1259b_p15_1259.jpg')] bg-cover bg-fixed bg-black/50 bg-blend-color-burn  px-6 md:px-16 lg:px-24">
+      <section className=" bg-[#010101] bg-blend-color-burn  px-6 md:px-16 lg:px-24">
   
 
-        <div className="max-w-7xl relative py-20 lg:py-36 mt-28 mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
+        <div className="max-w-7xl relative py-20 lg:py-36  mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
           {/* LEFT SIDE */}
           <div className="lg:pl-20 space-y-6 items-start ">
             {/* Vertical Line */}
@@ -39,9 +39,9 @@ const WhyRedLube = () => {
              
 
               <img
-                src="/products/red-lube-cargo-special-20w-50-api-ch-4.png" // put your image in public folder
+                src="/products/download (9).png" // put your image in public folder
                 alt="pattern"
-                className="object-contain mr-10 lg:mr-20"
+                className="object-contain mr-10 w-[80%] lg:mr-20"
               />
             </div>
           </div>
