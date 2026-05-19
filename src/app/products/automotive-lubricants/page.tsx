@@ -26,7 +26,7 @@ const Page = () => {
     <div className="bg-black  text-white">
       <img
         className=" w-screen object-cover object-center"
-        src="/banner/banner-image-1.webp"
+        src="/banner/banner-image-all.webp"
         alt="Banner"
       />
 
@@ -35,7 +35,7 @@ const Page = () => {
         <h2 className="text-3xl lg:text-4xl uppercase font-orbitron font-black text-center">
           AUTOMOTIVE Lubricants
         </h2>
-        <p className="max-w-6xl text-white/70 my-4 mx-auto text-center px-4">
+        <p className="max-w-6xl text-white/70 my-4 mx-auto text-center text-[15px] px-4">
           A complete range of high performance automotive lubricants engineered
           to deliver smooth rides, lasting engine protection, and superior fuel
           efficiency. Powered by advanced formulations like Ester Fluid

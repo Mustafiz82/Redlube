@@ -3,8 +3,8 @@ import React from "react";
 const Page = () => {
   // Define primary red color if not in tailwind.config: #9F1D21
   return (
-  <div className="bg-black pt-20 text-white">
-      <div className="flex flex-col  lg:flex-row max-w-7xl w-full py-10 lg:py-20 mx-auto px-5 gap-10">
+  <div className="bg-black relative pt-20 text-white">
+      <div className="flex flex-col z-[99] relative lg:flex-row max-w-7xl w-full py-10 lg:py-20 mx-auto px-5 gap-10">
       
       {/* Left Column: Address and Map */}
       <div className="space-y-6 flex-1">
@@ -44,7 +44,7 @@ const Page = () => {
       </div>
 
       {/* Right Column: Contact Form */}
-      <div className="flex-[1.2] bg-white/[0.03] border border-white/10 backdrop-blur-md shadow-2xl rounded-xl p-8 lg:p-12 text-white">
+      <div className="flex-[1.2] Z-[-1] bg-white/[0.03] border border-white/10 backdrop-blur-md shadow-2xl rounded-xl p-8 lg:p-12 text-white">
         <h3 className="text-2xl font-orbitron font-extrabold mb-8 text-white/90 uppercase tracking-tight">
           Send us a <span className="text-primary">Message</span>
         </h3>
@@ -107,7 +107,7 @@ const Page = () => {
 
 
 
-    <div className="h-28 w-full bg-linear-to-t from-primary/70  to-black"></div>
+    <div className="h-68 absolute bottom-0 w-full bg-linear-to-t from-primary/70  to-black"></div>
   </div>
   );
 };

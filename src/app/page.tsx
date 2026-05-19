@@ -8,9 +8,8 @@ export default function Home() {
   return (
     <div className="">
       <Banner />
-      <AboutSection />
-      <WhyRedLube />
-      <Product />
+     <WhyRedLube />
+       <Product />
     </div>
   );
 }

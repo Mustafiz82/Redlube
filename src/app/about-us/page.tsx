@@ -4,9 +4,9 @@ import React from 'react';
 
 const page = () => {
     return (
-        <div>
+        <div className=' lg:mt-28'>
             <AboutSection/>
-            <WhyRedLube/>
+            {/* <WhyRedLube/> */}
         </div>
     );
 };

@@ -21,7 +21,7 @@ const Nav: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const path = usePathname();
 
-  console.log(path);
+  console.log(path)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,8 +59,7 @@ const Nav: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-[999] flex  px-20  justify-between items-center  shadow-sm transition-all duration-300 ease-in-out px-5 
-      ${/* Mobile: always py-4 | Desktop: changes between 6 and 3 */ ""}
+      className={`fixed top-0 ${path == "/about-us" ? "lg:bg-black" : "lg:bg-transparent"}   left-0 w-full z-999 flex  lg:px-20  justify-between items-center  shadow-sm transition-all duration-300 ease-in-out px-5 
       py-4 ${isScrolled ? "lg:py-3 bg-black/20 backdrop-blur-sm" : "lg:py-6"}`}
     >
       <div className="flex justify-between w-full items-center">
@@ -70,7 +69,7 @@ const Nav: React.FC = () => {
             alt="Redlube Logo"
             width={500}
             height={100}
-            className={`object-contain contrast-200 drop-shadow-2xl drop-shadow-[1px_1px_0px_#fff] w-auto transition-all duration-300 ease-in-out 
+            className={`object-contain contrast-200  drop-shadow-[1px_1px_0px_#fff] w-auto transition-all duration-300 ease-in-out 
               ${/* Mobile: always h-10 | Desktop: shrinks from h-20 to h-12 */ ""}
               h-10 ${isScrolled ? "lg:h-12 " : "lg:h-20"}`}
           />
@@ -97,7 +96,7 @@ const Nav: React.FC = () => {
           <li key={idx} className="relative group">
             <Link
               href={item.link || "#"}
-              className={`px-4 flex text-nowrap items-center cursor-pointer font-black text-white font-orbitron hover:text-white hover:bg-primary transition-all duration-300 
+              className={`px-4 flex text-nowrap items-center cursor-pointer font-black text-white font-orbitron hover:text-white hover:bg-primary transition-all duration-500 
                 ${isScrolled ? "py-2" : "py-4"}
                 ${item?.link == path ? "bg-primary " : "bg-transparent "}
                 
@@ -112,15 +111,15 @@ const Nav: React.FC = () => {
             </Link>
 
             {item.children && (
-              <ul className="absolute left-0 top-full w-64 bg-white shadow-2xl border-t-4 border-primary opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+              <ul className="absolute z-[999] left-0 top-full w-64 bg-white shadow-2xl border-t-4 border-primary opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-500 ease-in-out">
                 {item.children.map((child, childIdx) => (
                   <li
                     key={childIdx}
-                    className="border-b border-gray-50 last:border-none"
+                    className="border-b  z-[999]  border-gray-50 last:border-none"
                   >
                     <Link
                       href={child.link}
-                      className="block px-6 py-4 text-sm font-bold text-gray-700 font-orbitron hover:bg-gray-100 hover:text-primary transition-colors"
+                      className="block   z-[999] px-6 py-4 text-sm font-bold text-gray-700 font-orbitron hover:bg-gray-100 hover:text-primary transition-colors"
                     >
                       {child.label}
                     </Link>
@@ -134,8 +133,8 @@ const Nav: React.FC = () => {
 
       {/* Mobile Menu (Stays consistent) */}
       <div
-        className={`lg:hidden bg-white/95 flex-1 backdrop-blur-md w-full absolute top-full left-0 transition-all duration-300 overflow-hidden shadow-lg ${
-          open ? "max-h-[600px] border-b" : "max-h-0"
+        className={`lg:hidden bg-[#1A1A1A] flex-1 backdrop-blur-md w-full absolute top-full left-0 transition-all duration-500 overflow-hidden shadow-lg ${
+          open ? "max-h-150 border-b" : "max-h-0"
         }`}
       >
         <ul className="flex flex-col w-full pb-4">
@@ -169,17 +168,17 @@ const Nav: React.FC = () => {
 
               {item.children && (
                 <ul
-                  className={`flex flex-col bg-gray-50 overflow-hidden transition-all duration-300 ease-in-out ${activeSubmenu === item.label ? "max-h-[300px]" : "max-h-0"}`}
+                  className={`flex flex-col bg-[#1A1A1A]  overflow-hidden transition-all duration-300 ease-in-out ${activeSubmenu === item.label ? "max-h-75" : "max-h-0"}`}
                 >
                   {item.children.map((child, childIdx) => (
                     <li
                       key={childIdx}
-                      className="border-b border-gray-200 last:border-none"
+                      className=""
                     >
                       <Link
                         href={child.link}
                         onClick={() => setIsOpen(false)}
-                        className="block px-10 py-3 text-sm font-bold text-gray-600 font-orbitron hover:bg-gray-200 hover:text-primary transition-colors"
+                        className="block px-10 py-3 text-sm font-bold text-white/80 font-orbitron hover:bg-gray-200 hover:text-primary transition-colors"
                       >
                         {child.label}
                       </Link>

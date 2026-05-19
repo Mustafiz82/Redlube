@@ -2,10 +2,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #000000;
   --foreground: #171717;
   /* --primary : #EB0700 */
-  --primary : #EC1D00
+  --primary: #EC1D00
 }
 
 @theme inline {
@@ -33,7 +33,8 @@ body {
 
 
 
-.swiper-button-next , .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   background-color: white !important;
   z-index: 999 !important;
   padding: 12px !important;
@@ -47,6 +48,7 @@ body {
 .swiper-button-next {
   margin-right: 20px !important;
 }
+
 .swiper-button-prev {
   margin-left: 20px !important;
 }
@@ -54,7 +56,7 @@ body {
 .swiper-pagination {
   position: absolute !important;
   bottom: 0 !important;
- 
+
 
 
 }
@@ -88,8 +90,8 @@ body {
 
 
 .shadow-custom:hover {
-  box-shadow: -9px 19px 27px 15px rgba(0,0,0,0.1);
-  
+  box-shadow: -9px 19px 27px 15px rgba(0, 0, 0, 0.1);
+
 }
 
 .shadow-custom {
@@ -111,6 +113,7 @@ body {
   background: transparent;
   cursor: pointer;
   display: block;
+  scale: 0.7;
 }
 
 .burger input {
@@ -122,7 +125,7 @@ body {
   position: absolute;
   height: 4px;
   width: 100%;
-  background: black;
+  background: rgb(248, 248, 248);
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -147,39 +150,105 @@ body {
   transform: translateY(-100%);
 }
 
-.burger input:checked ~ span:nth-of-type(1) {
+.burger input:checked~span:nth-of-type(1) {
   transform: rotate(48deg);
   top: 0px;
   left: 4px;
 }
 
-.burger input:checked ~ span:nth-of-type(2) {
+.burger input:checked~span:nth-of-type(2) {
   width: 0%;
   opacity: 0;
 }
 
-.burger input:checked ~ span:nth-of-type(3) {
+.burger input:checked~span:nth-of-type(3) {
   transform: rotate(-50deg);
   top: 26px;
   left: 5px;
 }
 
+/* 
+.gradient {
+  background-image: linear-gradient(
+    140deg,
+    hsl(7deg 100% 46%) 0%,
+    hsl(6deg 98% 41%) 4%,
+    hsl(6deg 97% 35%) 9%,
+    hsl(5deg 95% 30%) 13%,
+    hsl(4deg 94% 25%) 17%,
+    hsl(3deg 92% 19%) 22%,
+    hsl(2deg 89% 14%) 26%,
+    hsl(0deg 86% 8%) 31%,
+    hsl(0deg 86% 3%) 35%,
+    hsl(0deg 86% 3%) 39%,
+    hsl(0deg 86% 3%) 44%,
+    hsl(0deg 86% 3%) 48%,
+    hsl(0deg 86% 3%) 52%,
+    hsl(0deg 86% 3%) 57%,
+    hsl(0deg 86% 3%) 61%,
+    hsl(0deg 86% 3%) 65%,
+    hsl(0deg 86% 3%) 69%,
+    hsl(0deg 86% 3%) 73%,
+    hsl(0deg 86% 3%) 77%,
+    hsl(0deg 86% 3%) 81%,
+    hsl(0deg 86% 3%) 85%,
+    hsl(0deg 86% 3%) 89%,
+    hsl(0deg 86% 3%) 93%,
+    hsl(0deg 86% 3%) 96%,
+    hsl(0deg 86% 3%) 100%
+  );
+} */
 
 .gradient {
   background-image: linear-gradient(
-    120deg,
-    hsl(0deg 0% 0%) 0%,
-    hsl(0deg 0% 0%) 11%,
-    hsl(0deg 0% 0%) 21%,
-    hsl(0deg 0% 0%) 30%,
-    hsl(0deg 89% 15%) 38%,
-    hsl(0deg 91% 29%) 44%,
-    hsl(0deg 90% 44%) 48%,
-    hsl(0deg 91% 29%) 50%,
-    hsl(0deg 89% 15%) 50%,
-    hsl(0deg 0% 0%) 53%,
-    hsl(0deg 0% 0%) 62%,
-    hsl(0deg 0% 0%) 79%,
-    hsl(0deg 0% 0%) 100%
+    140deg,
+    hsl(7deg 100% 46%) 0%,
+    hsl(7deg 98% 42%) 2%,
+    hsl(6deg 97% 37%) 4%,
+    hsl(5deg 95% 33%) 7%,
+    hsl(4deg 94% 28%) 10%,
+    hsl(4deg 93% 23%) 14%,
+    hsl(3deg 92% 19%) 18%,
+    hsl(2deg 89% 14%) 24%,
+    hsl(1deg 88% 10%) 29%,
+    hsl(0deg 85% 5%) 36%,
+    hsl(0deg 86% 3%) 42%,
+    hsl(0deg 86% 3%) 49%,
+    hsl(0deg 86% 3%) 56%,
+    hsl(0deg 86% 3%) 64%,
+    hsl(0deg 86% 3%) 71%,
+    hsl(0deg 86% 3%) 77%,
+    hsl(0deg 86% 3%) 84%,
+    hsl(0deg 86% 3%) 90%,
+    hsl(0deg 86% 3%) 95%,
+    hsl(0deg 86% 3%) 100%
   );
+}
+
+
+@media screen and (max-width : 640px) {
+  .swiper-button-next {
+    scale: 0.7;
+    margin-right: 0px !important;
+  }
+
+  .swiper-button-prev {
+    scale: 0.7;
+    margin-left: 0px !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    margin-right: 10px !important;
+
+  }
+
+  .swiper-pagination-bullet-active::after {
+
+    width: 18px !important;
+    height: 18px !important;
+
+  }
+
 }

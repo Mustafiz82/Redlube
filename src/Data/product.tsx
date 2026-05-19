@@ -49,6 +49,7 @@ export const productData:Product[] = [
   },
   {
     productName: "RED LUBE CARGO SPECIAL 20W-50 (API CH-4)",
+    formate : "webp",
     slug: "red-lube-cargo-special-20w-50-api-ch-4",
     category:"automotive-lubricants",
     subCategory : "DIESEL",
@@ -415,6 +416,7 @@ export interface Product {
   category : string;
   subCategory : string;
   slug: string;
+  formate? : string 
   
   tagline: string;
   productDescription: string;

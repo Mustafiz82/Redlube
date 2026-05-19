@@ -42,9 +42,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${paladinsstraight.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full bg-black   flex flex-col">
         <Nav />
-        <div className="">{children}</div>
+        <div className="mt-17.5 lg:mt-0">{children}</div>
         <Footer />
       </body>
     </html>

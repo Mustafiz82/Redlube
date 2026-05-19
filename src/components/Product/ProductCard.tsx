@@ -39,10 +39,10 @@ export default function ProductCard({ item }: ProductCardProps) {
 
   <Link
       href={`/products/${item.category}/${item?.slug}`}
-      className="flex border border-[#bd202da8] rounded-xl  items-center justify-center"
+      className="flex  border border-[#bd202da8] rounded-xl  items-center justify-center"
     >
       {/* Updated bg: white -> white (light), neutral-900 (dark) */}
-      <div className="group w-[320px] rounded-2xl bg-white dark:bg-neutral-900 shadow-xl dark:shadow-black/20 p-6 text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-transparent dark:border-neutral-800">
+      <div className="group w-full sm:w-[320px] rounded-2xl bg-white dark:bg-neutral-900 shadow-xl dark:shadow-black/20 p-6 text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-transparent dark:border-neutral-800">
         {/* Product Image Container */}
         <div className="flex justify-center my-6">
           {/* Updated bg: gray-100 -> neutral-800 */}
@@ -57,7 +57,7 @@ export default function ProductCard({ item }: ProductCardProps) {
         </div>
 
         {/* Title - Updated text-gray-900 -> text-gray-900 (light), white (dark) */}
-        <h2 className="text-xl font-orbitron font-bold text-gray-900 dark:text-white leading-tight transition-colors duration-300 group-hover:text-primary">
+        <h2 className="text-lg  font-orbitron font-bold text-gray-900 dark:text-white leading-tight transition-colors duration-300 group-hover:text-primary">
           {item.productName.split("(")[0]}
         </h2>
 

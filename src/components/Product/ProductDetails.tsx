@@ -261,6 +261,11 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
           </div>
         </div>
       </div>
+
+
+      {/* <div className="bg-linear-to-t from-primary/70  to-black h-[300px] w-full">
+
+      </div> */}
     </div>
   );
 };

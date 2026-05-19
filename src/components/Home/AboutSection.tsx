@@ -1,162 +1,114 @@
-// import Image from "next/image";
-
-// export default function AboutSection() {
-//   return (
-//     <section className="bg-white relative  px-6 md:px-16 lg:px-24">
-//       <div className="max-w-7xl mt-16 lg:mt-28 mx-auto grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-16 items-center">
-//         {/* LEFT SIDE */}
-//         <div className="flex md:pl-20 items-start gap-6">
-//           {/* Vertical Line */}
-//           <div className="w-[6px] h-[80px] lg:h-[120px] bg-primary mt-2"></div>
-
-//           {/* Heading */}
-//           <h2 className="font-paladin font-extralight text-4xl md:text-5xl  text-primary leading-tight">
-//             ABOUT <br /> US
-//           </h2>
-//         </div>
-
-//         {/* RIGHT SIDE */}
-//         <div className=" space-y-5 lg:space-y-10  relative">
-//           {/* Top Image */}
-//           {/* <div className="flex absolute  -top-16  -right-20 justify-end">
-//             <img
-//               src="/shapes/red-star.png" // put your image in public folder
-//               alt="pattern"
-//               className=" object-contain"
-//             />
-//           </div> */}
-
-//           {/* Description */}
-//           <div className=" relative  z-10 ">
-//             <p className="text-gray-700 bg-white leading-relaxed shadow-custom p-0 lg:p-10 text-[15px] ">
-//               REDLUBE develops and implements next-generation technologies to
-//               safely and ethically meet the world's expanding demand for energy
-//               and high-quality chemical products. RED LUBE is one of the leading
-//               energy providers and chemical producers in India. With the vision
-//               of being a pioneer in providing safe, innovative and efficient
-//               energy to consumers in an affordable price range, REDLUBE is
-//               constantly innovating and evolving at the pace of the market.
-//             </p>
-
-//             {/* Commitment */}
-//             <div className="lg:p-10 bg-white shadow-custom  mt-8 ">
-//               <h3 className="font-orbitron text-xl font-bold mb-4">
-//                 OUR COMMITMENT
-//               </h3>
-
-//               <p className="text-gray-700 leading-relaxed text-[15px] ">
-//                 To improve global prosperity, affordable and sustainable energy
-//                 alternatives are needed. Our mission is to provide the world
-//                 with better and more affordable energy and we are constantly
-//                 striving to do so.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//     </section>
-//   );
-// }
+import React from 'react';
 
 export default function AboutSection() {
   return (
-    // Solid deep dark background for a clean, sharp look
-    <section className="bg-[#0a0a0a] bg-linear-to-br from-primary via-black to-black relative px-6 md:px-16 lg:px-24 py-20">
-      <div className="max-w-7xl my-16 mx-auto grid lg:grid-cols-[1fr_2fr] gap-10 lg:gap-16 items-start">
+    <div className="bg-[#0a0a0a] text-white overflow-hidden">
+      
+      {/* SECTION 1: ABOUT US & MISSION */}
+      <section className="relative  py-20 lg:py-32 px-6 md:px-16 lg:px-24">
+        {/* Decorative Background Gradient Streak */}
 
-        {/* LEFT SIDE */}
-        <div className="flex md:pl-20 items-start gap-6">
-          {/* Solid bold red line - sharp and clean */}
-          <div className="w-[6px] h-[80px] lg:h-[120px] bg-red-600 mt-2"></div>
+            <div className="absolute h-[400px] w-full top-0 lg:h-[500px] left-0 bg-gradient-to-bl from-primary via-black to-black"></div>
+        <div className="absolute top-0 -left-20 w-[500px] h-[500px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-          <h2 className="font-paladin font-extralight text-4xl md:text-5xl text-white leading-tight">
-            ABOUT <br /> US
-          </h2>
-        </div>
-
-        {/* RIGHT SIDE */}
-        <div className="space-y-10">
-
-          {/* Description - Clean white text on dark background */}
-          <div className="border-l border-white/20 pl-8">
-            <p className="text-gray-400 leading-relaxed text-[16px] max-w-2xl">
-              REDLUBE develops and implements next-generation technologies to
-              safely and ethically meet the world's expanding demand for energy
-              and high-quality chemical products. RED LUBE is one of the leading
-              energy providers and chemical producers in India. With the vision
-              of being a pioneer in providing safe, innovative and efficient
-              energy to consumers in an affordable price range, REDLUBE is
-              constantly innovating and evolving at the pace of the market.
-            </p>
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_2.5fr] gap-12 items-start relative z-10">
+          {/* Left: Heading */}
+          <div className="flex items-start gap-6">
+            <div className="w-[6px] h-[50px] lg:h-[100px] bg-red-600 shadow-[0_0_20px_#dc2626]"></div>
+            <h2 className="font-paladin text-4xl lg:text-5xl  tracking-tighter leading-none">
+              ABOUT <br className='hidden lg:block' />
+              <span className="text-primary">US</span>
+            </h2>
           </div>
 
-          {/* Commitment - Clean typography with red accent */}
-          <div className="border-l border-red-600 pl-8">
-            <h3 className="font-orbitron text-lg font-bold mb-4 text-white uppercase tracking-widest">
-              Our Commitment
-            </h3>
-
-            <p className="text-gray-400 leading-relaxed text-[16px] max-w-2xl">
-              To improve global prosperity, affordable and sustainable energy
-              alternatives are needed. Our mission is to provide the world
-              with better and more affordable energy and we are constantly
-              striving to do so.
+          {/* Right: Intro Text */}
+          <div className="space-y-8">
+            <p className="text-gray-300 leading-relaxed text-lg md:text-xl font-light">
+              <span className="text-white font-bold">RED LUBE</span> is a leading high-performance lubricants brand dedicated to engineering advanced lubrication solutions that power industries, protect engines, and keep vehicles and machinery running at peak performance. 
             </p>
+            
+            <div className="grid md:grid-cols-2 gap-10">
+              <div className="border-l border-white/10 pl-6">
+                <h3 className="font-orbitron text-primary text-sm tracking-[0.2em] uppercase mb-4">Our Vision</h3>
+                <p className="text-white/90 text-sm leading-relaxed">
+                  Trusted by automotive professionals and industrial businesses, RED LUBE delivers superior-quality engine oil, gear oil, and hydraulic fluids built for the most demanding conditions across the globe.
+                </p>
+              </div>
+              <div className="border-l border-white/10 pl-6">
+                <h3 className="font-orbitron text-primary text-sm tracking-[0.2em] uppercase mb-4">Our Commitment</h3>
+                <p className="text-white/90 text-sm leading-relaxed">
+                  We are committed to making world-class lubrication technology affordable and accessible. From small workshops to large-scale industrial operations, we deliver consistent performance and long-term value.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* SECTION 2: TECHNOLOGY & ENGINEERING (Modern "Dark" Card) */}
+      <section className=" lg:py-20 px-6 md:px-16 lg:px-24 bg-gradient-to-b from-[#0a0a0a] to-[#0f0f0f]">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white/5 border border-white/10 p-8 px-5 md:p-16 rounded-sm relative">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="font-orbitron text-lg md:text-3xl font-bold mb-6">
+                  ENGINEERED TO PERFORM. <br />
+                  <span className="text-primary">BUILT TO LAST.</span>
+                </h2>
+                <p className="text-white/90 leading-relaxed">
+                  Formulated using cutting-edge additive technology and advanced base oil blending processes, RED LUBE lubricants are designed to extend engine life, reduce wear and friction, improve fuel efficiency, and lower maintenance costs. 
+                </p>
+                <p className="mt-4 text-white/90">
+                  Our product range meets and exceeds international quality standards — ensuring compatibility, reliability, and performance across all major engine types and industrial applications.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="aspect-square bg-red-600/10 flex flex-col justify-center items-center text-center p-4 border border-red-600/20">
+                  <span className="text-primary font-bold text-3xl mb-2">MAX</span>
+                  <span className="text-[10px] uppercase tracking-widest">Protection</span>
+                </div>
+                <div className="aspect-square bg-white/5 flex flex-col justify-center items-center text-center p-4 border border-white/10">
+                  <span className="text-white font-bold text-3xl mb-2">EST</span>
+                  <span className="text-[10px] uppercase tracking-widest">Formulations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: WHY CHOOSE RED LUBE (Grid Layout) */}
+      <section className="py-20  bg-linear-to-t from-primary/70  via-black to-black px-6 md:px-16 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12 text-center lg:text-left">
+            <h3 className="font-orbitron text-primary tracking-widest text-sm mb-2">THE RED LUBE ADVANTAGE</h3>
+            <h2 className="text-3xl lg:text-4xl font-paladin">WHY CHOOSE US?</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: "Advanced Formulations", desc: "Synthetic and semi-synthetic blends for modern high-performance engines." },
+              { title: "Wear Resistance", desc: "Superior engine protection that minimizes friction and extends machinery life." },
+              { title: "Fuel Economy", desc: "Optimized viscosity to improve mileage and extend drain intervals." },
+              { title: "Global Standards", desc: "Fully compliant with international quality and safety benchmarks." },
+              { title: "Versatile Range", desc: "Solutions available for automotive, commercial, and heavy-duty industrial use." },
+              { title: "Affordable Quality", desc: "Premium technology priced to be accessible without compromising performance." },
+            ].map((item, index) => (
+              <div key={index} className="group p-5 border border-white/5 hover:border-red-600/50 transition-all duration-300 bg-[#111]">
+                <div className="w-10 h-[2px] bg-red-600 mb-6 group-hover:w-20 transition-all duration-300"></div>
+                <h4 className="font-orbitron text-lg mb-3 group-hover:text-primary transition-colors">
+                  {item.title}
+                </h4>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      
+    </div>
   );
 }
-
-
-
-
-// gradient from center to ritht
-// export default function AboutSection() {
-//   return (
-//     <section className="relative  py-20 px-6 md:px-16 lg:px-24 bg-[#0a0a0a] overflow-hidden">
-//       {/* Background Gradient Streak */}
-//       <div
-//         className="absolute gradient   top-0 -left-70 w-full h-full opacity-100 pointer-events-none"
-        
-//       />
-      
-
-//       <div className="max-w-7xl mx-auto grid mt-10  lg:grid-cols-[1fr_2fr] gap-12 items-start relative z-10">
-//         <div className="flex items-center gap-6">
-//           <div className="w-[6px] h-[80px] bg-[#EC1D00] shadow-[0_0_15px_#EC1D00]"></div>
-//           <h2 className="font-paladin text-5xl text-white">
-//             ABOUT
-//             <br />
-//             <span className="text-[#EC1D00]">US</span>
-//           </h2>
-//         </div>
-
-//         <div className="space-y-10">
-//           <p className="text-gray-300 leading-relaxed text-lg border-l-2 border-[#EC1D00] pl-6">
-//             REDLUBE develops and implements next-generation technologies to 
-//             safely and ethically meet the world's expanding demand for energy 
-//             and high-quality chemical products. RED LUBE is one of the leading
-//              energy providers and chemical producers in India. With the vision
-//              of being a pioneer in providing safe, innovative and efficient 
-//             energy to consumers in an affordable price range, REDLUBE is 
-//             constantly innovating and evolving at the pace of the market.
-//           </p>
-//           <div className="bg-white/5 p-8 border-l-4 border-[#EC1D00]">
-//             <h3 className="text-[#EC1D00] font-bold uppercase tracking-widest mb-2">
-//               Our Commitment
-//             </h3>
-//             <p className="text-gray-400">
-//                 To improve global prosperity, affordable and sustainable energy
-//                alternatives are needed. Our mission is to provide the world
-//                with better and more affordable energy and we are constantly
-//                striving to do so.
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }

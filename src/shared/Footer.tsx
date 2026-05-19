@@ -10,7 +10,7 @@ const Footer = () => {
   <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-12 pb-16">
     
     {/* Logo Section - Add brightness filter if the logo is black */}
-    <div className="flex items-start">
+    <div className="flex w-[200px] mx-auto lg:w-full items-start">
       <img src="/logos/redlube-logo-footer-wh.png" alt="Redlube Logo" className="brightness-200" />
     </div>
 
@@ -34,14 +34,14 @@ const Footer = () => {
       <h3 className="text-xl font-bold mb-6 text-white">Social Links</h3>
       <div className="flex gap-4">
         <a
-          href="#"
+          href="https://www.facebook.com/redlubebangladesh"
           className="w-10 h-10 border border-neutral-700 rounded-full flex items-center justify-center text-neutral-400 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
           aria-label="Facebook"
         >
           <FaFacebookF size={18} />
         </a>
         <a
-          href="#"
+          href="https://www.instagram.com/redlubeofficial?igsh=ZHg2dTV6M3d4anlo&utm_source=qr"
           className="w-10 h-10 border border-neutral-700 rounded-full flex items-center justify-center text-neutral-400 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
           aria-label="Instagram"
         >
@@ -54,8 +54,8 @@ const Footer = () => {
   {/* Bottom Copyright Bar */}
   <div className="bg-[#ec1c00b6] py-4">
     <div className="max-w-7xl mx-auto px-6 md:px-12">
-      <p className="text-white text-sm font-medium">
-        ©2022. All Rights Reserved.
+      <p className="text-white text-center text-sm font-medium">
+        ©2026. All Rights Reserved.
       </p>
     </div>
   </div>
