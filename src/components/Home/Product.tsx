@@ -14,7 +14,7 @@ const Product = () => {
           </h2>
         </div>
 
-        <p className="mt-5 text-neutral-600 dark:text-neutral-400">
+        <p className="mt-5 text-neutral-300">
           Our wide range of lubrication solutions that improve vehicle
           performance, longevity and reliability.
         </p>

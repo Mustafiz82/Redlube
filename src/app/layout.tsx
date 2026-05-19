@@ -40,6 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="dark"
       className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} ${paladinsstraight.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-black   flex flex-col">

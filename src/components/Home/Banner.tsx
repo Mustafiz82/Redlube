@@ -41,8 +41,11 @@ const Banner = () => {
               alt={"banner-image"}
               // layout="fill"
               width={1000}
+              priority={true}
+              quality={100}
+              sizes="100vw"
               height={1000}
-              className="mx-auto  w-screen object-top-left object-cover  xl:h-screen  "
+              className="mx-auto   w-screen object-top-left object-cover  xl:h-screen  "
               src={item}
             />
           </SwiperSlide>

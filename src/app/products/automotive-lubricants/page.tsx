@@ -98,14 +98,14 @@ const Page = () => {
       </div>
       <div
         ref={sectionRef}
-        className="relative bg-linear-to-t from-primary/70 via-black to-black"
+        className="relative bg-linear-to-t  from-primary/70 via-black to-black"
       >
         {/* PRODUCTS WRAPPER */}
-        <div className="flex flex-wrap justify-center z-[50] relative px-10 py-16 gap-5">
-          {productData?.map((item, index) => (
+        <div className="flex max-w-7xl  mx-auto flex-wrap justify-center z-[50] relative px-10 py-16 gap-5 ">
+          {products?.map((item, index) => (
             <div
               key={index}
-              className="w-full md:w-[calc(33.333%-1.25rem)] xl:w-[calc(25%-1.25rem)]"
+              className="w-full  md:w-[calc(33.333%-1.25rem)] xl:w-[calc(25%-1.25rem)]"
             >
               <ProductCard item={item} />
             </div>

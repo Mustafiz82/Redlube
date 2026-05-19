@@ -14,7 +14,7 @@ const page = () => {
           Industrial Lubricants
         </h2>
        <div className="bg-linear-to-t from-[#ec1c00ab]  to-black  pb-20">
-         <p className="max-w-6xl  text-white/70 my-4 mx-auto text-center px-4">
+         <p className="max-w-6xl  text-white/80 my-4 mx-auto text-center px-4">
           A complete range of high performance industrial lubricants engineered
           to deliver smooth rides, lasting engine protection, and superior fuel
           efficiency. Powered by advanced formulations like Ester Fluid

@@ -4,8 +4,8 @@
 :root {
   --background: #000000;
   --foreground: #171717;
-  /* --primary : #EB0700 */
   --primary: #EC1D00
+  /* --primary : #EB0700 */
 }
 
 @theme inline {

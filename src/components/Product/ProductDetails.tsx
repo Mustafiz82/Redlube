@@ -43,7 +43,7 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
               <span className="text-xs font-bold tracking-widest uppercase bg-primary text-white px-3 py-1 rounded">
                 {product.category}
               </span>
-              <span className="text-xs font-bold tracking-widest uppercase bg-neutral-200 text-white/70 px-3 py-1 rounded">
+              <span className="text-xs font-bold tracking-widest uppercase bg-neutral-700 text-white/70 px-3 py-1 rounded">
                 {product.subCategory}
               </span>
             </div>
@@ -63,7 +63,7 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
             {/* Quick Specs Highlight */}
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="border-l-4 border-primary pl-4">
-                <p className="text-sm text-neutral-500 uppercase font-bold">
+                <p className="text-sm text-neutral-300 uppercase font-bold">
                   Viscosity
                 </p>
                 <p className="text-xl font-orbitron font-semibold">
@@ -71,7 +71,7 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
                 </p>
               </div>
               <div className="border-l-4 border-primary pl-4">
-                <p className="text-sm text-neutral-500 uppercase font-bold">
+                <p className="text-sm text-neutral-300 uppercase font-bold">
                   Standard
                 </p>
                 <p className="text-xl font-orbitron font-semibold">
