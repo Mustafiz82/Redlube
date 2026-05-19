@@ -5,18 +5,18 @@ export default function AboutSection() {
     <div className="bg-[#0a0a0a] text-white overflow-hidden">
       
       {/* SECTION 1: ABOUT US & MISSION */}
-      <section className="relative  py-20 lg:py-32 px-6 md:px-16 lg:px-24">
+      <section className="relative  py-20 xl:py-32 px-6 md:px-16 xl:px-24">
         {/* Decorative Background Gradient Streak */}
 
-            <div className="absolute h-[400px] w-full top-0 lg:h-[500px] left-0 bg-gradient-to-bl from-primary via-black to-black"></div>
+            <div className="absolute h-[400px] w-full top-0 xl:h-[500px] left-0 bg-gradient-to-bl from-primary via-black to-black"></div>
         <div className="absolute top-0 -left-20 w-[500px] h-[500px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_2.5fr] gap-12 items-start relative z-10">
+        <div className="max-w-7xl mx-auto grid xl:grid-cols-[1fr_2.5fr] gap-12 items-start relative z-10">
           {/* Left: Heading */}
           <div className="flex items-start gap-6">
-            <div className="w-[6px] h-[50px] lg:h-[100px] bg-red-600 shadow-[0_0_20px_#dc2626]"></div>
-            <h2 className="font-paladin text-4xl lg:text-5xl  tracking-tighter leading-none">
-              ABOUT <br className='hidden lg:block' />
+            <div className="w-[6px] h-[50px] xl:h-[100px] bg-red-600 shadow-[0_0_20px_#dc2626]"></div>
+            <h2 className="font-paladin text-4xl xl:text-5xl  tracking-tighter leading-none">
+              ABOUT <br className='hidden xl:block' />
               <span className="text-primary">US</span>
             </h2>
           </div>
@@ -46,10 +46,10 @@ export default function AboutSection() {
       </section>
 
       {/* SECTION 2: TECHNOLOGY & ENGINEERING (Modern "Dark" Card) */}
-      <section className=" lg:py-20 px-6 md:px-16 lg:px-24 bg-gradient-to-b from-[#0a0a0a] to-[#0f0f0f]">
+      <section className=" xl:py-20 px-6 md:px-16 xl:px-24 bg-gradient-to-b from-[#0a0a0a] to-[#0f0f0f]">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 border border-white/10 p-8 px-5 md:p-16 rounded-sm relative">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid xl:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="font-orbitron text-lg md:text-3xl font-bold mb-6">
                   ENGINEERED TO PERFORM. <br />
@@ -78,14 +78,14 @@ export default function AboutSection() {
       </section>
 
       {/* SECTION 3: WHY CHOOSE RED LUBE (Grid Layout) */}
-      <section className="py-20  bg-linear-to-t from-primary/70  via-black to-black px-6 md:px-16 lg:px-24">
+      <section className="py-20  bg-linear-to-t from-primary/70  via-black to-black px-6 md:px-16 xl:px-24">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12 text-center lg:text-left">
+          <div className="mb-12 text-center xl:text-left">
             <h3 className="font-orbitron text-primary tracking-widest text-sm mb-2">THE RED LUBE ADVANTAGE</h3>
-            <h2 className="text-3xl lg:text-4xl font-paladin">WHY CHOOSE US?</h2>
+            <h2 className="text-3xl xl:text-4xl font-paladin">WHY CHOOSE US?</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {[
               { title: "Advanced Formulations", desc: "Synthetic and semi-synthetic blends for modern high-performance engines." },
               { title: "Wear Resistance", desc: "Superior engine protection that minimizes friction and extends machinery life." },

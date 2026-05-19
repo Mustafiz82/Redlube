@@ -59,7 +59,7 @@ const Nav: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 ${path == "/about-us" ? "lg:bg-black" : "lg:bg-transparent"}   left-0 w-full z-999 flex  lg:px-20  justify-between items-center  shadow-sm transition-all duration-300 ease-in-out px-5 
+      className={`fixed top-0 ${path == "/about-us" ? "lg:bg-black" : "lg:bg-transparent"}   left-0 w-full z-999 flex  xl:px-20  justify-between items-center  shadow-sm transition-all duration-300 ease-in-out px-5 
       py-4 ${isScrolled ? "lg:py-3 bg-black/20 backdrop-blur-sm" : "lg:py-6"}`}
     >
       <div className="flex justify-between w-full items-center">

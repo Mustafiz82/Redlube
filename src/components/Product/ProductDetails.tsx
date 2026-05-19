@@ -24,7 +24,7 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
 
       <div className="max-w-7xl py-12 px-4 md:px-6 w-full mx-auto">
         {/* --- HERO SECTION --- */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-10 xl:gap-20 items-start">
           <div className="w-full md:h-[400px] relative lg:h-auto lg:w-2/5 bg-white/[0.03] border order order border-white/10 hover:border-primary/50 transition-colors duration-500 hover:border-primary/50 transition-colors duration-500 backdrop-blur-md p-8 lg:p-16 rounded-3xl  flex justify-center border border-black">
             {/* Using a placeholder - in dynamic version, slug matches image name */}
             <Image
@@ -48,11 +48,11 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-[40px] font-orbitron font-bold text-white/90 leading-tight">
+            <h1 className="text-2xl md:text-[40px] lg:text-[32px] font-orbitron font-bold text-white/90 leading-tight">
               {product.productName}
             </h1>
 
-            <p className="text-lg font-semibold text-primary mt-2 font-orbitron italic">
+            <p className="text-md md:text-lg font-semibold text-primary mt-2 font-orbitron italic">
               {product.tagline}
             </p>
 
@@ -94,9 +94,9 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
         </div>
 
         {/* --- DETAILED INFO SECTION --- */}
-        <div className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="mt-20 grid grid-cols-1 xl:grid-cols-3 gap-8">
           {/* Key Advantages (Left 2 Columns) */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="xl:col-span-2 space-y-8">
             {/* Spec Table */}
             <div className="bg-neutral-900 lg:hidden text-white rounded-3xl overflow-hidden shadow-xl">
               <div className="p-6 bg-primary">
@@ -180,9 +180,9 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
           </div>
 
           {/* Specifications & Storage (Right 1 Column) */}
-          <div className="space-y-8">
+          <div className="space-y-8 flex flex-col lg:flex-row gap-5  xl:flex-col">
             {/* Spec Table */}
-            <div className="bg-neutral-900 hidden lg:block text-white rounded-3xl overflow-hidden shadow-xl">
+            <div className="bg-neutral-900 flex-1 hidden lg:block text-white rounded-3xl overflow-hidden shadow-xl">
               <div className="p-6 bg-primary">
                 <h3 className="text-xl font-bold font-orbitron uppercase tracking-wider">
                   Technical Specs
@@ -219,7 +219,7 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
             </div>
 
             {/* Storage and Handling */}
-            <div className="bg-white/[0.03] border order border-white/10 hover:border-primary/50 transition-colors duration-500 backdrop-blur-md rounded-3xl shadow-sm p-8">
+            <div className="bg-white/[0.03] flex-1 border order border-white/10 hover:border-primary/50 transition-colors duration-500 backdrop-blur-md rounded-3xl shadow-sm p-8">
               <h3 className="text-2xl font-bold font-orbitron text-white/90 mb-6 flex items-center gap-3">
                 <FaWarehouse className="text-primary" size={24} /> Handling
               </h3>

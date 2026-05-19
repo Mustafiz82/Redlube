@@ -42,7 +42,7 @@ const Banner = () => {
               // layout="fill"
               width={1000}
               height={1000}
-              className="mx-auto  w-screen object-top-left object-cover  lg:h-screen  "
+              className="mx-auto  w-screen object-top-left object-cover  xl:h-screen  "
               src={item}
             />
           </SwiperSlide>

@@ -4,7 +4,7 @@ const Page = () => {
   // Define primary red color if not in tailwind.config: #9F1D21
   return (
   <div className="bg-black relative pt-20 text-white">
-      <div className="flex flex-col z-[99] relative lg:flex-row max-w-7xl w-full py-10 lg:py-20 mx-auto px-5 gap-10">
+      <div className="flex flex-col z-[99] relative lg:flex-row max-w-7xl w-full py-10 lg:py-20 mx-auto px-5 lg:px-10 gap-10 lg:gap-5 xl:gap-10">
       
       {/* Left Column: Address and Map */}
       <div className="space-y-6 flex-1">

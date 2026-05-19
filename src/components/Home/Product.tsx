@@ -5,7 +5,7 @@ import React from "react";
 const Product = () => {
   return (
     <div className="w-full relative bg-linear-to-tl from-primary via-black to-black    overflow-hidden bg-white dark:bg-neutral-950 transition-colors duration-500">
-      <div className="max-w-7xl px-5 lg:px-0 lg:pl-20 py-20 mx-auto">
+      <div className="max-w-7xl px-5 lg:px-10  xl:pl-20 py-20 mx-auto">
         <div className="flex items-start gap-6">
           <div className="w-[6px] h-[30px] lg:h-[40px] bg-primary mt-2"></div>
 
@@ -19,10 +19,10 @@ const Product = () => {
           performance, longevity and reliability.
         </p>
         <div className="flex flex-wrap justify-center z-[50] relative py-16 gap-5">
-          {productData.map((item, index) => (
+          {productData?.map((item, index) => (
             <div
               key={index}
-              className="w-full md:w-[calc(33.333%-1.25rem)] lg:w-[calc(25%-1.25rem)]"
+              className="w-full md:w-[calc(33.333%-1.25rem)] xl:w-[calc(25%-1.25rem)]"
             >
               <ProductCard item={item} />
             </div>

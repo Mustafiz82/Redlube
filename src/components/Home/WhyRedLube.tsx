@@ -3,12 +3,12 @@ import React from "react";
 const WhyRedLube = () => {
   return (
     <div>
-      <section className=" relative bg-[#0D0101]  px-6 md:px-16 lg:px-24">
+      <section className=" relative bg-[#0D0101]  px-6 md:px-10 xl:px-24">
 
         <div className="absolute w-[200px] h-[400px] lg:w-[800px] top-0 lg:h-[700px] left-0 gradient"></div>
   
-
-        <div className="max-w-7xl relative py-20 lg:  mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
+           
+        <div className="max-w-7xl  relative py-20 lg:  mx-auto grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
           {/* LEFT SIDE */}
           <div className="xl:pl-20 space-y-6 items-start ">
             {/* Vertical Line */}
@@ -16,7 +16,7 @@ const WhyRedLube = () => {
               <div className="w-[5px] h-[30px] lg:h-[40px] bg-primary mt-2"></div>
 
               {/* Heading */}
-              <h2 className="font-paladin text-white font-extralight text-xl 2xl:text-3xl lg:text-[40px]  text-primary leading-tight">
+              <h2 className="font-paladin text-white font-extralight text-xl 2xl:text-3xl lg:text-[32px] xl:text-[40px]  text-primary leading-tight">
                 Why RedLube
               </h2>
             </div>
