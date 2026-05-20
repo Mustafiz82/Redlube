@@ -55,7 +55,7 @@ const Footer = () => {
   <div className="bg-[#ec1c00b6] py-4">
     <div className="max-w-7xl mx-auto px-6 md:px-12">
       <p className="text-white text-center text-sm font-medium">
-        ©2026. All Rights Reserved.
+        ©2022. All Rights Reserved- Red Lube
       </p>
     </div>
   </div>

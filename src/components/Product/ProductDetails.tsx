@@ -89,6 +89,10 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
                   {product.specification.specialTechnology} ENABLED
                 </div>
               )}
+
+              <div className="px-6 py-4 bg-neutral-900 text-white  text-sm flex items-center rounded-xl">
+                Pack Size :  {product.specification.availableVolume}
+              </div>
             </div>
           </div>
         </div>
@@ -209,7 +213,7 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
                     </dd>
                   </div>
                   <div className="flex justify-between border-b border-neutral-700 pb-2">
-                    <dt className="text-neutral-400">Packaging</dt>
+                    <dt className="text-neutral-400">Pack Size</dt>
                     <dd className="font-bold">
                       {product.specification.availableVolume}
                     </dd>
@@ -261,7 +265,6 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
           </div>
         </div>
       </div>
-
 
       {/* <div className="bg-linear-to-t from-primary/70  to-black h-[300px] w-full">
 

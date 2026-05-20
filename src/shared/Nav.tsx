@@ -60,7 +60,7 @@ const Nav: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 ${path == "/about-us" ? "lg:bg-black" : "lg:bg-transparent"}   left-0 w-full z-999 flex  xl:px-20  justify-between items-center  shadow-sm transition-all duration-300 ease-in-out px-5 
-      py-4 ${isScrolled ? "lg:py-3 bg-black/20 backdrop-blur-sm" : "lg:py-6"}`}
+      py-4 ${isScrolled ? "lg:py-3 lg:bg-black! " : "lg:py-6"}`}
     >
       <div className="flex justify-between w-full items-center">
         <Link href={"/"}>
@@ -69,7 +69,7 @@ const Nav: React.FC = () => {
             alt="Redlube Logo"
             width={500}
             height={100}
-            className={`object-contain contrast-200  drop-shadow-[1px_1px_0px_#fff] w-auto transition-all duration-300 ease-in-out 
+            className={`object-contain contrast-200  drop-shadow-[1px_1px_0px_#000000] w-auto transition-all duration-300 ease-in-out 
               ${/* Mobile: always h-10 | Desktop: shrinks from h-20 to h-12 */ ""}
               h-10 ${isScrolled ? "lg:h-12 " : "lg:h-20"}`}
           />

@@ -37,34 +37,41 @@ export default function ProductCard({ item }: ProductCardProps) {
     //   </div>
     // </Link>
 
-  <Link
+    <Link
       href={`/products/${item.category}/${item?.slug}`}
       className="flex bborder border-[#bd202da8] rounded-xl  items-center justify-center"
     >
       {/* Updated bg: white -> white (light), neutral-900 (dark) */}
-      <div className="group w-full sm:w-[320px] rounded-2xl   bg-neutral-900 shadow-xl dark:shadow-black/20 p-6 text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-transparent dark:border-neutral-800">
+      <div className="group w-full sm:w-[320px] rounded-2xl   bg-[#0A0A09] shadow-xl dark:shadow-black/20  text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-transparent dark:border-neutral-800">
         {/* Product Image Container */}
-        <div className="flex justify-center my-6">
+        <div className="flex overflow-hidden  relative justify-center py-6">
           {/* Updated bg: gray-100 -> neutral-800 */}
-          <div className="w-40 h-40 bg-neutral-800 rounded-full relative transition-colors duration-300">
+          <div className="w-40 mt-6 mb-2  h-40 relative  rounded-full relative transition-colors duration-300">
             <Image
               src={"/products/" + item?.slug + ".png"}
               alt={item.productName}
               fill
-              className="object-contain transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+              className="object-contain relative z-[960] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
             />
           </div>
+          <img
+            src="/shapes/circle final-2.png"
+            className="absolute bottom-3     left-1/2 -translate-x-1/2  bg-blend-color-dodge left-0 z-[50]"
+            alt=""
+          />
         </div>
 
         {/* Title - Updated text-gray-900 -> text-gray-900 (light), white (dark) */}
-        <h2 className="text-lg  font-orbitron font-bold text-white leading-tight transition-colors duration-300 group-hover:text-primary">
-          {item.productName.split("(")[0]}
-        </h2>
+        <div className="p-6 z-[999] relative pt-0">
+          <h2 className="text-lg  font-orbitron font-bold text-white leading-tight transition-colors duration-300 group-hover:text-primary">
+            {item.productName.split("(")[0]}
+          </h2>
 
-        {/* Button - Colors remain the same for the primary 'pop', but text-white is explicit */}
-        <button className="mt-6 cursor-pointer w-full text-sm bg-primary text-white font-semibold py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 active:scale-95">
-          LEARN MORE
-        </button>
+          {/* Button - Colors remain the same for the primary 'pop', but text-white is explicit */}
+          <button className="mt-6 cursor-pointer w-full text-sm bg-primary text-white font-semibold py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 active:scale-95">
+            LEARN MORE
+          </button>
+        </div>
       </div>
     </Link>
   );
