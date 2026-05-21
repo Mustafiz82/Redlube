@@ -1,4 +1,19 @@
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Get in touch with Red Lube. Send us a message, locate our registered & corporate office in New Town, Kolkata, or contact us directly at info@redlube.net.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Us | Red Lube",
+    description: "Connect with Red Lube's corporate office in Kolkata, India. Send us an inquiry or reach out directly at info@redlube.net.",
+    url: "https://redlube.net/contact",
+  }
+};
+
 
 const Page = () => {
   // Define primary red color if not in tailwind.config: #9F1D21

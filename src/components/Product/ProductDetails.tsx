@@ -16,12 +16,32 @@ interface ProductPageProps {
 }
 
 const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
+
+  
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.productName,
+    image: `https://redlube.net/products/${product.slug}.png`,
+    description: product.productDescription,
+    category: product.category,
+    brand: {
+      "@type": "Brand",
+      name: "Red Lube",
+    },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      url: `https://redlube.net/products/${product.category}/${product.slug}`,
+    },
+  };
+
   return (
     <div className="bg-black pt-28 text-white">
-      <Head>
-        <title>{product.productName} | Red Lube</title>
-      </Head>
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       <div className="max-w-7xl py-12 px-4 md:px-6 w-full mx-auto">
         {/* --- HERO SECTION --- */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-10 xl:gap-20 items-start">
@@ -91,7 +111,7 @@ const ProductDetail: React.FC<ProductPageProps> = ({ product }) => {
               )}
 
               <div className="px-6 py-4 bg-neutral-900 text-white  text-sm flex items-center rounded-xl">
-                Pack Size :  {product.specification.availableVolume}
+                Pack Size : {product.specification.availableVolume}
               </div>
             </div>
           </div>

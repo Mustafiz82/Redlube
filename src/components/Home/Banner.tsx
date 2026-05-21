@@ -26,7 +26,7 @@ const Banner = () => {
           crossFade: true,
         }}
         navigation={true}
-        speed={2000}
+        speed={1000}
         loop={true}
         autoplay={{ delay: 3000 }}
         pagination={{
@@ -40,11 +40,11 @@ const Banner = () => {
             <Image
               alt={"banner-image"}
               // layout="fill"
-              width={1000}
+              width={4096}
               priority={true}
               quality={100}
               sizes="100vw"
-              height={1000}
+              height={2270}
               className="mx-auto   w-screen object-top-left object-cover  xl:h-screen  "
               src={item}
             />

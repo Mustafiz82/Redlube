@@ -19,9 +19,10 @@ const Nav: React.FC = () => {
   const [open, setIsOpen] = useState<boolean>(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [desktopSubmenu, setDesktopSubmenu] = useState<string | null>(null);
   const path = usePathname();
 
-  console.log(path)
+  console.log(path);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,9 +94,21 @@ const Nav: React.FC = () => {
       {/* Desktop Menu */}
       <ul className="hidden lg:flex flex-1 gap-2 justify-end">
         {menu.map((item, idx) => (
-          <li key={idx} className="relative group">
+          <li
+            key={idx}
+            className="relative group"
+            onMouseEnter={() => setDesktopSubmenu(item.label)}
+            onMouseLeave={() => setDesktopSubmenu(null)}
+          >
             <Link
-              href={item.link || "#"}
+            href={item?.link}
+              type="button"
+              onClick={() =>
+                item.children &&
+                setDesktopSubmenu(
+                  desktopSubmenu === item.label ? null : item.label,
+                )
+              }
               className={`px-4 flex text-nowrap items-center cursor-pointer font-black text-white font-orbitron hover:text-white hover:bg-primary transition-all duration-500 
                 ${isScrolled ? "py-2" : "py-4"}
                 ${item?.link == path ? "bg-primary " : "bg-transparent "}
@@ -111,7 +124,14 @@ const Nav: React.FC = () => {
             </Link>
 
             {item.children && (
-              <ul className="absolute z-[999] left-0 top-full w-64 bg-white shadow-2xl border-t-4 border-primary opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+              <ul
+                className={`absolute z-[999] left-0 top-full w-64 bg-white shadow-2xl border-t-4 border-primary transition-all duration-300 ease-in-out
+  ${
+    desktopSubmenu === item.label
+      ? "opacity-100 visible translate-y-0"
+      : "opacity-0 invisible translate-y-2"
+  }`}
+              >
                 {item.children.map((child, childIdx) => (
                   <li
                     key={childIdx}
@@ -171,10 +191,7 @@ const Nav: React.FC = () => {
                   className={`flex flex-col bg-[#1A1A1A]  overflow-hidden transition-all duration-300 ease-in-out ${activeSubmenu === item.label ? "max-h-75" : "max-h-0"}`}
                 >
                   {item.children.map((child, childIdx) => (
-                    <li
-                      key={childIdx}
-                      className=""
-                    >
+                    <li key={childIdx} className="">
                       <Link
                         href={child.link}
                         onClick={() => setIsOpen(false)}

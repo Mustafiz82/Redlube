@@ -1,9 +1,8 @@
- // Adjust this path to your component
-
+import type { Metadata } from "next";
+// Adjust this path to your component
 import ProductDetail from "@/components/Product/ProductDetails";
 import { productData } from "@/Data/product";
 
-// 1. Define the type for the params (it's now a Promise)
 interface PageProps {
   params: Promise<{
     category: string;
@@ -11,14 +10,58 @@ interface PageProps {
   }>;
 }
 
-// 2. Make the function 'async'
+// 1. Generate static paths at build time
+export async function generateStaticParams() {
+  return productData.map((product) => ({
+    category: product.category,
+    slug: product.slug,
+  }));
+}
+
+// 2. Generate dynamic metadata for search engines on the server
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const { slug } = resolvedParams;
+
+  const product = productData.find((p) => p.slug === slug);
+
+  if (!product) {
+    return {
+      title: "Product Not Found",
+    };
+  }
+
+  // Cuts off description nicely if it's too long for search card previews
+  const shortDescription = product.productDescription.length > 155 
+    ? `${product.productDescription.substring(0, 155)}...` 
+    : product.productDescription;
+
+  return {
+    title: product.productName.split("(")[0].trim(), // Inherits template: "ProductName | Red Lube"
+    description: shortDescription,
+    alternates: {
+      canonical: `/products/${product.category}/${product.slug}`,
+    },
+    openGraph: {
+      title: `${product.productName} | Premium Lubricants`,
+      description: shortDescription,
+      url: `https://redlube.net/products/${product.category}/${product.slug}`,
+      images: [
+        {
+          url: `/products/${product.slug}.png`,
+          width: 500,
+          height: 600,
+          alt: product.productName,
+        },
+      ],
+    },
+  };
+}
+
 export default async function Page({ params }: PageProps) {
-  
-  // 3. Await the params before using them
   const resolvedParams = await params;
   const { slug, category } = resolvedParams;
 
-  // 4. Find the product using the unwrapped slug
   const product = productData.find(p => p.slug === slug);
   
   if (!product) {
@@ -29,6 +72,5 @@ export default async function Page({ params }: PageProps) {
     );
   }
 
-  // 5. Pass the found product to your Design component
   return <ProductDetail product={product} />;
 }
