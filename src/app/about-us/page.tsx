@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "About Us",
   description: "Learn about RED LUBE, a leading high-performance lubricants brand. Discover our commitment to world-class engine protection, synthetic gear oil, and advanced lubrication technology designed to extend machinery life.",
   alternates: {
-    canonical: "/about",
+    canonical: "/about-us",
   },
   openGraph: {
     title: "About Us | Red Lube",

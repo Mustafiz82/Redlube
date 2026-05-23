@@ -66,7 +66,7 @@ const Nav: React.FC = () => {
       <div className="flex justify-between w-full items-center">
         <Link href={"/"}>
           <Image
-            src="/logos/logo-white.png"
+            src="/logos/logo-white.webp"
             alt="Redlube Logo"
             width={500}
             height={100}

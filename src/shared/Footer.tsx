@@ -41,7 +41,7 @@ const Footer = () => {
           <FaFacebookF size={18} />
         </a>
         <a
-          href="https://www.instagram.com/redlubeofficial?igsh=ZHg2dTV6M3d4anlo&utm_source=qr"
+          href="https://www.instagram.com/redlubeofficial"
           className="w-10 h-10 border border-neutral-700 rounded-full flex items-center justify-center text-neutral-400 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
           aria-label="Instagram"
         >

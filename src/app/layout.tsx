@@ -109,6 +109,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+   const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Red Lube",
+    "alternateName": "RedLube",
+    "url": "https://redlube.net",//
+    "logo": "https://redlube.net/logos/logo-white.webp", //
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "", // Add if you have one
+      "contactType": "customer service",
+      "email": "info@redlube.net",
+      "areaServed": "IN",
+      "availableLanguage": "en"
+    },
+    "sameAs": [
+      "https://www.facebook.com/redlubebangladesh", // Add your social links
+      "https://www.instagram.com/redlubeofficial"
+    ]
+  };
+
+
   return (
     <html
       lang="en"

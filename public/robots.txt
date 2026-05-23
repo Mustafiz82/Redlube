@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://redlube.net
+
+# Sitemaps
+Sitemap: https://redlube.net/sitemap.xml
